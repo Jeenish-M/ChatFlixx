@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+   margin: 0;
+   font-family: 'Comfortaa', cursive;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   color: #000;
+   height: 100vh;
+   display: flex;
+   background: linear-gradient(45deg, #4e65ff, #92effd);
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.NavBar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10%;
+}
+
+header {
+   position: fixed;
+   top: 0;
+   width: 98%;
+   border-radius: 10px;
+   padding: 20px 50px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   left: 0;
+   font-size: 2em;
+   user-select: none;
+   color: #000;
+}
+
+.navigation {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.navigation a {
+   position: relative;
+   font-size: 1.1em;
+   color: #000;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 40px;
+}
+
+.Hm {
+   left: -500%;
+   transition: 0.8s ease;
+}
+
+.Abt {
+   left: -500%;
+   transition: 0.6s ease;
+}
+
+.Cnt {
+   left: -500%;
+   transition: 0.4s ease;
+}
+
+.Btn {
+   left: -500%;
+   transition: 0.2s ease;
+}
+
+.Hm.active,
+.Abt.active,
+.Cnt.active,
+.Btn.active {
+   left: 0;
+}
+
+.navigation a::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   width: 100%;
+   height: 3px;
+   background: #000;
+   border-radius: 5px;
+   transform-origin: right;
+   transform: scaleX(0);
+   transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+   transform: scaleX(1);
+   transform-origin: left;
+}
+
+.hamburger {
+   margin-left: 25px;
+   width: 25px;
+   display: block;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(1) {
+   transform: translateY(8px) rotate(-45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+   opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+   transform: translateY(-8px) rotate(45deg);
+}
+
+.bar {
+   display: block;
+   width: 25px;
+   height: 3px;
+   border-radius: 5px;
+   margin: 5px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-color: #000;
+}
+
+.anime {
+   display: flex;
+   flex-direction: column;
+}
+
+.anime .static-text {
+   color: #000;
+   font-size: 60px;
+   font-weight: 400;
+}
+
+.anime .dynamic-text {
+   margin-left: 15px;
+   height: 90px;
+   line-height: 90px;
+   overflow: hidden;
+}
+
+.dynamic-text li {
+   list-style: none;
+   color: #e6f028;
+   font-size: 60px;
+   position: relative;
+   top: 0;
+   animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+   100% {
+      top: -360px;
+   }
+}
+
+.about-box {
+   position: relative;
+   width: 500px;
+   height: 480px;
+   border-radius: 20px;
+   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.about-box .about-txt {
+   width: 100%;
+   padding: 40px;
+}
+
+.about-txt h2 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+/* 199 to 303 ---- Login and Register */
+
+.LogReg {
+   width: 100%;
+   height: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.LogReg-Section {
+   position: relative;
+   width: auto;
+   padding: 30px;
+   height: auto;
+   border-radius: 20px;
+   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.form-box h2 {
+   font-size: 2em;
+   color: #162938;
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.LogReg-Section form .name-details {
+   display: flex;
+}
+
+.LogReg-Section .name-details .field:first-child {
+   margin-right: 10px;
+}
+
+.LogReg-Section .name-details .field:last-child {
+   margin-left: 10px;
+}
+
+.LogReg-Section form .field {
+   display: flex;
+   margin-bottom: 10px;
+   flex-direction: column;
+   position: relative;
+}
+
+.LogReg-Section form .field label {
+   margin-bottom: 2px;
+}
+
+.LogReg-Section form .input input {
+   height: 40px;
+   width: 100%;
+   font-size: 16px;
+   padding: 0 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+}
+
+.LogReg-Section form .field input {
+   outline: none;
+}
+
+.LogReg-Section form .image input {
+   font-size: 17px;
+}
+
+.LogReg-Section form .button input {
+   height: 45px;
+   border: none;
+   color: #fff;
+   font-size: 17px;
+   background: #333;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 13px;
+}
+
+.LogReg-Section form .field i {
+   position: absolute;
+   right: 15px;
+   top: 70%;
+   color: #ccc;
+   cursor: pointer;
+   transform: translateY(-50%);
+}
+
+.LogReg-Section form .field i.active::before {
+   color: #333;
+   content: "\f070";
+}
+
+.link {
+   text-align: center;
+   margin: 10px 0;
+   font-size: 17px;
+}
+
+.link a {
+   color: #333;
+   text-decoration: none;
+}
+
+.link a:hover {
+   text-decoration: underline;
+}
